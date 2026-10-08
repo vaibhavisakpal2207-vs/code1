@@ -1,0 +1,177 @@
+pratical 1: To create a basic webpage using common HTML tags such as headings, paragraphs, links, images, lists, tables, and forms.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My Basic Webpage</title>
+</head>
+<body>
+    <!-- Main Heading -->
+    <h1>Welcome to My Webpage</h1>
+    <!-- Paragraph -->
+    <p>
+        This is a basic webpage created using HTML tags.
+        HTML stands for HyperText Markup Language.
+    </p>
+    <hr>
+    <!-- About Section -->
+    <h2>About Me</h2>
+    <p>
+        My name is Student. I am learning web development
+        and exploring HTML, CSS and JavaScript.
+    </p>
+
+    <!-- Text Formatting -->
+    <h3>Text Formatting</h3>
+
+    <p>
+        This is <b>bold text</b>.
+        This is <i>italic text</i>.
+        This is <u>underlined text</u>.
+    </p>
+
+    <!-- Unordered List -->
+    <h2>My Hobbies</h2>
+
+    <ul>
+        <li>Reading</li>
+        <li>Programming</li>
+        <li>Music</li>
+        <li>Sports</li>
+    </ul>
+
+    <!-- Ordered List -->
+    <h2>Programming Languages</h2>
+
+    <ol>
+        <li>Python</li>
+        <li>Java</li>
+        <li>C++</li>
+        <li>JavaScript</li>
+    </ol>
+
+    <!-- Link -->
+    <h2>Useful Link</h2>
+
+    <p>
+        Visit
+        <a href="https://www.google.com" target="_blank">
+            Google
+        </a>
+    </p>
+
+    <!-- Table -->
+    <h2>Student Information</h2>
+
+    <table border="1" cellpadding="10">
+        <tr>
+            <th>Name</th>
+            <th>Course</th>
+            <th>Year</th>
+        </tr>
+
+        <tr>
+            <td>Student 1</td>
+            <td>Computer Science</td>
+            <td>Third</td>
+        </tr>
+
+        <tr>
+            <td>Student 2</td>
+            <td>Information Technology</td>
+            <td>Third</td>
+        </tr>
+    </table>
+
+    <!-- Form -->
+    <h2>Contact Form</h2>
+
+    <form>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+
+        <br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+
+        <br><br>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message"
+                  rows="4" cols="30"></textarea>
+
+        <br><br>
+
+        <input type="submit" value="Submit">
+
+        <input type="reset" value="Reset">
+
+    </form>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 My Basic Webpage</p>
+    </footer>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
