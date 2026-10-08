@@ -1,0 +1,165 @@
+<html lang="en">
+<head>
+    <title>Multimedia Webpage</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f6fa;
+            margin: 0;
+            text-align: center;
+        }
+
+        header {
+            background-color: #2563eb;
+            color: white;
+            padding: 25px;
+        }
+
+        section {
+            background-color: white;
+            width: 80%;
+            max-width: 800px;
+            margin: 25px auto;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        img {
+            width: 400px;
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        audio,
+        video {
+            width: 100%;
+            max-width: 600px;
+        }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #1e293b;
+            color: white;
+            padding: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Multimedia Webpage</h1>
+        <p>Images, Audio, Video and Links using HTML</p>
+    </header>
+
+
+    <!-- Image Section -->
+
+    <section>
+        <h2>Image</h2>
+        <img src="image.jpg"
+             alt="Sample Image">
+        <p>
+            This image is added using the HTML
+            <code>&lt;img&gt;</code> tag.
+        </p>
+    </section>
+    <!-- Audio Section -->
+    <section>
+       <h2>Audio</h2>
+        <audio controls>
+            <source src="audio.mp3"
+                    type="audio/mpeg">
+
+            Your browser does not support
+            the audio element.
+
+        </audio>
+
+        <p>
+            The audio player is created using
+            the HTML5 <code>&lt;audio&gt;</code> tag.
+        </p>
+
+    </section>
+
+
+    <!-- Video Section -->
+
+    <section>
+
+        <h2>Video</h2>
+
+        <video controls>
+
+            <source src="video.mp4"
+                    type="video/mp4">
+
+            Your browser does not support
+            the video element.
+
+        </video>
+
+        <p>
+            The video player is created using
+            the HTML5 <code>&lt;video&gt;</code> tag.
+        </p>
+
+    </section>
+
+
+    <!-- Links Section -->
+
+    <section>
+
+        <h2>Useful Links</h2>
+
+        <p>
+            Visit
+            <a href="https://www.google.com"
+               target="_blank">
+                Google
+            </a>
+        </p>
+
+        <p>
+            Visit
+            <a href="https://www.wikipedia.org"
+               target="_blank">
+                Wikipedia
+            </a>
+        </p>
+
+        <p>
+            <a href="mailto:example@email.com">
+                Send an Email
+            </a>
+        </p>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            &copy; 2026 Multimedia Webpage
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

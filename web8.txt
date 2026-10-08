@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>DOM Manipulation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f2f6fa;
+            padding: 50px;
+        }
+        .container {
+            background-color: white;
+            width: 500px;
+            max-width: 90%;
+            margin: auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            color: #2563eb;
+        }
+
+        #text {
+            margin: 20px 0;
+            font-size: 18px;
+            color: #333;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .show-btn {
+            background-color: #16a34a;
+        }
+
+        .hide-btn {
+            background-color: #dc2626;
+        }
+
+        button:hover {
+            opacity: 0.85;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>DOM Manipulation</h1>
+        <p id="text">
+            This is a paragraph controlled using JavaScript DOM
+            manipulation.
+        </p>
+
+        <button class="show-btn"
+                onclick="showText()">
+            Show Text
+        </button>
+        <button class="hide-btn"
+                onclick="hideText()">
+            Hide Text
+        </button>
+    </div>
+    <script>
+        // Function to show text
+        function showText() {
+            document.getElementById("text")
+                    .style.display = "block";
+        }
+        // Function to hide text
+        function hideText() {
+            document.getElementById("text")
+                    .style.display = "none";
+        }
+    </script>
+</body>
+</html>
+

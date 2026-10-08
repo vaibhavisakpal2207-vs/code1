@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JavaScript Form Validation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f6fa;
+        }
+        .form-container {
+            width: 400px;
+            max-width: 90%;
+            margin: 50px auto;
+            padding: 25px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            text-align: center;
+            color: #2563eb;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            background-color: #2563eb;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #1d4ed8;
+        }
+        #message {
+            margin-top: 15px;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Registration Form</h1>
+        <form id="registrationForm">
+            <label for="name">Name:</label>
+            <input type="text"    id="name"
+                   placeholder="Enter your name">
+            <label for="email">Email:</label>
+            <input type="text"
+                   id="email"
+                   placeholder="Enter your email">
+            <label for="mobile">Mobile Number:</label>
+
+            <input type="text"
+                   id="mobile"
+                   placeholder="Enter 10-digit mobile number">
+            <label for="password">Password:</label>
+            <input type="password"
+                   id="password"
+                   placeholder="Enter password">
+            <label for="confirmPassword">
+                Confirm Password:
+            </label>
+
+            <input type="password"
+                   id="confirmPassword"
+                   placeholder="Confirm password">
+
+
+            <button type="submit">
+                Register
+            </button>
+
+        </form>
+
+        <div id="message"></div>
+
+    </div>
+
+
+    <script>
+
+        // Get form and message elements
+        const form = document.getElementById(
+            "registrationForm"
+        );
+
+        const message = document.getElementById(
+            "message"
+        );
+
+
+        // Form submit event
+        form.addEventListener("submit", function(event) {
+
+            // Prevent form submission
+            event.preventDefault();
+
+
+            // Get input values
+            const name = document.getElementById(
+                "name"
+            ).value.trim();
+
+            const email = document.getElementById(
+                "email"
+            ).value.trim();
+
+            const mobile = document.getElementById(
+                "mobile"
+            ).value.trim();
+
+            const password = document.getElementById(
+                "password"
+            ).value;
+
+            const confirmPassword =
+                document.getElementById(
+                    "confirmPassword"
+                ).value;
+
+
+            // Email pattern
+            const emailPattern =
+                /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+
+            // Mobile number pattern
+            const mobilePattern =
+                /^[0-9]{10}$/;
+
+
+            // Clear previous message
+            message.textContent = "";
+
+
+            // Validate Name
+            if (name === "") {
+                message.textContent =
+                    "Please enter your name.";
+                message.style.color = "red";
+                return;          }
+            // Validate Email
+            if (!emailPattern.test(email)) {
+                message.textContent =
+                    "Please enter a valid email address.";
+                message.style.color = "red";
+                return;
+            }
+            // Validate Mobile Number
+            if (!mobilePattern.test(mobile)) {
+
+                message.textContent =
+                    "Mobile number must contain 10 digits.";
+
+                message.style.color = "red";
+                return;
+            }
+            // Validate Password
+            if (password.length < 6) {
+                message.textContent =
+                    "Password must contain at least 6 characters.";
+                message.style.color = "red";
+                return;
+            }
+            // Validate Confirm Password
+            if (password !== confirmPassword) {
+                message.textContent =
+                    "Passwords do not match.";
+                message.style.color = "red";
+                return;
+            }
+            // Successful validation
+            message.textContent =
+                "Registration successful!";
+            message.style.color = "green";
+            // Clear form
+            form.reset();
+        });
+
+    </script>
+</body>
+</html>
+
